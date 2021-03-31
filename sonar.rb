@@ -5,16 +5,16 @@
 class Sonar < Formula
   desc ""
   homepage ""
-  version "1.5.3"
+  version "1.5.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bi-zone/sonar/releases/download/v1.5.3/sonar_1.5.3_Darwin_x86_64.tar.gz"
-    sha256 "89e0a1ca0563167a884b85cda4458017e48faa2b3dd37ad1c13fa79f78bd7186"
+    url "https://github.com/bi-zone/sonar/releases/download/v1.5.4/sonar_1.5.4_Darwin_x86_64.tar.gz"
+    sha256 "b8c48dd2b2b30c0feb3af2e83d7cf3ea5df6c713c2dfeb8199f7f533f24c2121"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bi-zone/sonar/releases/download/v1.5.3/sonar_1.5.3_Linux_x86_64.tar.gz"
-    sha256 "7f7726ddcf26a332992f5025918718b0f87527031c1e038455aa7d3776a64718"
+    url "https://github.com/bi-zone/sonar/releases/download/v1.5.4/sonar_1.5.4_Linux_x86_64.tar.gz"
+    sha256 "8a0975a23d94b8d1b2ef17f794a7508a22a75b88a44fa3f438972e25d4d9903a"
   end
 
   def install
