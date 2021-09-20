@@ -5,20 +5,20 @@
 class Sonar < Formula
   desc ""
   homepage ""
-  version "1.7.0"
+  version "1.7.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bi-zone/sonar/releases/download/v1.7.0/sonar_1.7.0_Darwin_x86_64.tar.gz"
-      sha256 "a5918329e8ff993e6121ae4caf47d3935e0b68dde77c40630f00d1a098990595"
+      url "https://github.com/bi-zone/sonar/releases/download/v1.7.1/sonar_1.7.1_Darwin_x86_64.tar.gz"
+      sha256 "458e0aa430161f9c27d6fdb15859ac4096dadfb00509df8c33726cbd003f2ef8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bi-zone/sonar/releases/download/v1.7.0/sonar_1.7.0_Linux_x86_64.tar.gz"
-      sha256 "c3cc3995122d34176454af9a6eade8e33b291130465bb0267f8b6f03231abb4f"
+      url "https://github.com/bi-zone/sonar/releases/download/v1.7.1/sonar_1.7.1_Linux_x86_64.tar.gz"
+      sha256 "d8d846e040b25907933be208070c5d68d3c465bcf35d370d29367501a84de873"
     end
   end
 
