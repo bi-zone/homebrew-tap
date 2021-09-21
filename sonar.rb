@@ -11,14 +11,14 @@ class Sonar < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/bi-zone/sonar/releases/download/v1.7.3/sonar_1.7.3_Darwin_x86_64.tar.gz"
-      sha256 "2ce4f93a9fbdc7c35f70bf7523a45f1e3658c04c6be19b43cf13e47bed6046b0"
+      sha256 "c7d7974d8e40029a595f0068f7d67bc2de6041a90e7bdfa347a6a7b8922b80bb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/bi-zone/sonar/releases/download/v1.7.3/sonar_1.7.3_Linux_x86_64.tar.gz"
-      sha256 "a4d5e3213f5b7a77ba6de1bdf63a724204905fd3407e1dfeb4174f4f13232b76"
+      sha256 "6299c9923beb43fe3329744db72738babfe80aa4c26ede590d46e28ef4ef536d"
     end
   end
 
