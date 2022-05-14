@@ -5,24 +5,35 @@
 class Sonar < Formula
   desc ""
   homepage ""
-  version "1.7.4"
-  bottle :unneeded
+  version "1.7.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bi-zone/sonar/releases/download/v1.7.4/sonar_1.7.4_Darwin_x86_64.tar.gz"
-      sha256 "85e4decb32e6e34c053e64b68de3990dabd533f23e4b11dc09445b8c9d925942"
+    url "https://github.com/bi-zone/sonar/releases/download/v1.7.5/sonar_1.7.5_Darwin_x86_64.tar.gz"
+    sha256 "20c25094806f44edaade34705884a73706551d8e1d0e5648e30788fb83b31b42"
+
+    def install
+      bin.install "sonar"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Sonar
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bi-zone/sonar/releases/download/v1.7.4/sonar_1.7.4_Linux_x86_64.tar.gz"
-      sha256 "aae7dc9f5975648e780d3c219d4a5b8dd4cd052918ab62bd00f78c27e7706da0"
-    end
-  end
+      url "https://github.com/bi-zone/sonar/releases/download/v1.7.5/sonar_1.7.5_Linux_x86_64.tar.gz"
+      sha256 "70e578b5798acea82870bb71158635fcf76131d4b542ec2c7c730b1ebac57290"
 
-  def install
-    bin.install "sonar"
+      def install
+        bin.install "sonar"
+      end
+    end
   end
 end
